@@ -19,5 +19,11 @@
 }
 
 .btn--medium {
+  border-radius: 15px;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(85, 88, 237);
   font-size: 18px;
 }

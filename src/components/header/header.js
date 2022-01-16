@@ -9,7 +9,7 @@ export const Header = () => {
     <div className="header">
       <div className="wrapper">
         <Link to="/" className="header__store-title">
-          Game Store
+          Магазин игр (почти Steam)
         </Link>
       </div>
       <div className="wrapper header__cart-btn-wrapper">
