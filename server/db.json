@@ -1,4 +1,13 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "name": "Leha",
+      "phone": "+375445166489",
+      "password": 123,
+      "status": "admin"
+    }
+  ],
   "GAMES": [
     {
       "image": "/game-covers/forza_5.jpeg",
@@ -81,27 +90,29 @@
       "genres": [
         "жизнь"
       ],
-      "price": "21",
+      "price": 21,
       "video": "https://www.youtube.com/embed/AwFUqTFf9hs",
       "description": "The Sims — серия компьютерных игр в жанре симулятор жизни, разработанная геймдизайнером Уиллом Райтом и такими компаниями как Maxis и The Sims Studio и изданная компанией Electronic",
       "id": 7
     },
     {
-      "title": "",
-      "image": "",
-      "genres": [],
-      "price": "",
-      "video": "",
-      "description": "",
+      "title": "s",
+      "image": "s",
+      "genres": [
+        "qdqwdq"
+      ],
+      "price": 34,
+      "video": "qwdqwd",
+      "description": "dqwd",
       "id": 8
     },
     {
-      "title": "",
-      "image": "",
-      "genres": [],
-      "price": "",
-      "video": "",
-      "description": "",
+      "phone": {
+        "phone": "3754451664",
+        "password": "123",
+        "id": 11
+      },
+      "password": "123",
       "id": 9
     }
   ]

@@ -1,8 +1,5 @@
-.admin-page__btn {
-  border-radius: 15px;
-  color: white;
-  background-color:rgb(85, 88, 237);
-  border: none;
-  padding: 15px;
-  cursor: pointer;
+.admin-page__container {
+  display: flex;
+  flex-wrap: wrap;
+ 
 }

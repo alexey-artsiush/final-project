@@ -6,6 +6,7 @@ import { OrderPage } from "./pages/order-page";
 import { Header } from "./components/header";
 import { store } from "./redux";
 import { AdminPage } from "./pages/admin-page/admin-page";
+import {LoginPage} from "./pages/login-page"
 
 function App() {
   return (
@@ -15,13 +16,16 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <HomePage />
+          <LoginPage />
           </Route>
           <Route exact path="/app/:title">
             <GamePage />
           </Route>
           <Route exact path="/order">
             <OrderPage />
+          </Route>
+          <Route exact path="/home">
+            <HomePage />
           </Route>
           <Route exact path="/admin">
             <AdminPage />
