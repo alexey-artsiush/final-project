@@ -21,7 +21,7 @@ export const GameBuy = ({game}) =>{
   }
   return (
     <div className="game-buy">
-      <span className="game-buy__price">{game.price} руб.</span>
+      <span className="game-buy__price">{game.price} $</span>
       <Button
       type = { isItemInCart ? "secondary" : "primary" }  
       onClick= {handleClick}>

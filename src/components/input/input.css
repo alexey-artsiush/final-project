@@ -1,0 +1,18 @@
+.input {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.input:focus {
+  width: 200px;
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(85, 88, 237);;
+}
+
+.admine-line__inputs {
+  width: 40%;
+}

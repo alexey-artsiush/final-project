@@ -1,0 +1,12 @@
+.login-page {
+  margin: 15% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width: 25%;
+}
+
+.login-page__buttons {
+  display: flex;
+}

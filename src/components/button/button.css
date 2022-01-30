@@ -5,6 +5,27 @@
   padding: 5px;
   cursor: pointer;
 }
+.btn--small {
+  font-size: 14px;
+  border-radius: 15px;
+  color: white;
+  border: none;
+  padding: 7px;
+  cursor: pointer;
+  background-color: rgb(85, 88, 237);
+}
+
+
+.btn--medium {
+  border-radius: 15px;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(85, 88, 237);
+  font-size: 18px;
+  margin: 5px;
+}
 
 .btn--primary {
   background-color: rgb(85, 88, 237);
@@ -14,10 +35,6 @@
   background-color: rgb(80, 82, 84);
 }
 
-.btn--small {
-  font-size: 14px;
-}
-
-.btn--medium {
-  font-size: 18px;
+.btn--create {
+  background-color: rgb(10, 190, 3);
 }
