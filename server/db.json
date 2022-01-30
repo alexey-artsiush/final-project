@@ -1,11 +1,9 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Leha",
-      "phone": "+375445166489",
-      "password": 123,
-      "status": "admin"
+      "email": "art@mail.ru",
+      "password": "$2a$10$Myb.Kjj.McduDzCOC5d6peM1H613/vBICRNTmAmHx9VElKBxMlZW.",
+      "id": 7
     }
   ],
   "GAMES": [
@@ -83,37 +81,6 @@
       "video": "https://www.youtube.com/embed/ssrNcwxALS4",
       "id": 6,
       "description": "Assassin’s Creed Valhalla — мультиплатформенная компьютерная игра в жанре action/RPG, разработанная студией Ubisoft Montreal под издательством компании Ubisoft. Является двенадцатой игрой в серии игр Assassin’s Creed."
-    },
-    {
-      "title": "sims 4",
-      "image": "https://upload.wikimedia.org/wikipedia/ru/thumb/0/03/Ea-the-sims-pc.jpg/274px-Ea-the-sims-pc.jpg",
-      "genres": [
-        "жизнь"
-      ],
-      "price": 21,
-      "video": "https://www.youtube.com/embed/AwFUqTFf9hs",
-      "description": "The Sims — серия компьютерных игр в жанре симулятор жизни, разработанная геймдизайнером Уиллом Райтом и такими компаниями как Maxis и The Sims Studio и изданная компанией Electronic",
-      "id": 7
-    },
-    {
-      "title": "s",
-      "image": "s",
-      "genres": [
-        "qdqwdq"
-      ],
-      "price": 34,
-      "video": "qwdqwd",
-      "description": "dqwd",
-      "id": 8
-    },
-    {
-      "phone": {
-        "phone": "3754451664",
-        "password": "123",
-        "id": 11
-      },
-      "password": "123",
-      "id": 9
-    }
+    } 
   ]
 }

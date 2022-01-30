@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import { FaBeer } from 'react-icons/fa'
 import { AdmineLine } from "../../components/admin-line";
 import { Button } from "../../components/button";
 import { Input } from "../../components/input";
@@ -19,8 +18,6 @@ export const AdminPage = () => {
   const [genres, setGenres] = useState([])
   const [price, setPrice] = useState("")
   const [video, setVideo] = useState("")
-  // const [error, setError] = useState("")
-  // const [user, setUser]= useState({})
 
   const dispatch = useDispatch()
   const games = useSelector(selectGames)
@@ -28,6 +25,7 @@ export const AdminPage = () => {
   useEffect(() => {
     dispatch(getGames())
   }, [])
+  
 
   const onChangeTitle = (event) => {
     setTitle(event.target.value)
@@ -63,22 +61,17 @@ export const AdminPage = () => {
       dispatch(getGamesFailure())
     }}
 
-    const deleteGame = (event) => {
-      console.log(event.target.id)
-      // if (id == Button.key) {
-      //   console.log('grac')
-        // axios.delete('http://localhost:3001/GAMES', { 
-        //   params: {
-        //     id: 7
-        //   }
-         
-        // })
-        // .then(
-        //   response => {console.log(response)
-          // dispatch(getGames())
-          // })
-      // }
-    }
+    const deleteGame = async (event) => {
+      try {
+        axios.delete(`http://localhost:3001/GAMES/${event.target.id}`)
+        dispatch(getGames())
+      } catch (err) {
+        dispatch(getGamesFailure())
+      }}
+     
+      
+       
+    
      
   return (
   <div className="admin-page">

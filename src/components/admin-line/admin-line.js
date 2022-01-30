@@ -28,7 +28,7 @@ export const AdmineLine = ({id, title, image, genres, price, video, description,
             <div className="admine-line__graph-scroll">Описание игры: {description}</div>
           </div>
           <div className="admine-line__cart-button">
-            <Button key={id} size="m" onClick={onClick}>Удалить</Button>
+            <Button size="m" onClick={onClick} id={id}> {id} Удалить</Button>
           </div>
           
         </div>
