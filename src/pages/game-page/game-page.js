@@ -3,7 +3,10 @@ import { useSelector} from 'react-redux';
 import { GameBuy } from "../../components/game-buy";
 import { GameCover } from "../../components/game-cover/game-cover";
 import { GameGenre } from "../../components/game-genre";
+import { Comments } from "../../components/comments"
+import { Input } from "../../components/input/input";
 import "./game-page.css";
+
 
 export const GamePage = () => {
   const game = useSelector(state => state.game.currentGame);
@@ -35,6 +38,13 @@ export const GamePage = () => {
           </div>
         </div>
       </div>
+      <div className="game-page__comments">
+        <h3>Комментарии:</h3>
+        <Input type="text" placeholder="Имя" value={null} onChange={null}/>
+        <Input type="text" placeholder="Комментарий" value={null} onChange={null}/>
+        <Comments />
+      </div>
+      
     </div>
   );
 };

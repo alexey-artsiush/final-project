@@ -26,7 +26,6 @@ export const AdminPage = () => {
     dispatch(getGames())
   }, [])
   
-
   const onChangeTitle = (event) => {
     setTitle(event.target.value)
   }
@@ -68,10 +67,6 @@ export const AdminPage = () => {
       } catch (err) {
         dispatch(getGamesFailure())
       }}
-     
-      
-       
-    
      
   return (
   <div className="admin-page">
