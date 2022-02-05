@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Input } from "../../components/input";
 import { Button } from "../../components/button";
@@ -11,51 +11,50 @@ export const LoginPage = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
-  const [user, setUser]= useState({})
 
   const history = useHistory()
 
   const login = async () =>{ 
-    // if (email !== /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/ && !error && password.length > 6) { 
-      try {
-        const response = await axios.post('http://localhost:3001/login',
-        {
-          "email": `${email}`,
-          "password": `${password}`
-        })
-       
-        setEmail(response.data)
+    try {
+      const response = await axios.post('http://localhost:3001/login',
+      {
+        "email": `${email}`,
+        "password": `${password}`
+      }) 
+      setEmail(response.data)
         history.push('/home')
       } catch (err) {
-        setError(err.response.data)
-      }}
-    // }
+        setError("Пользователь не найден")
+      }
+    }
 
     const handleKeyDown = (event) => {
       if (event.key === 'Enter') {
         login()       
+      } else if (email !== /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/ && !error && password.length > 6) {
+        setError("Введите e-mail правильного формата")
       }}
   
     const registration = async () =>{ 
-      try {
-        const response = await axios.post('http://localhost:3001/register',
-        {
-          "email": `${email}`,
-          "password": `${password}`
-        })
-        setEmail(response.data)
-      } catch (err) {
-        setError(err.response.data)
+      if (email == /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/ && !error && password.length > 6) {
+        try {
+          const response = await axios.post('http://localhost:3001/register',
+          {
+            "email": `${email}`,
+            "password": `${password}`
+          })
+          setEmail(response.data)
+        } catch (err) {
+          setError(err.response.data)
+        }
+      } else {
+        setError("e-mail должен иметь вид example@example.com и пароль должен быть более 5 знаков")
       }}  
-
-    const onChangePassword =(event) => {
-      setPassword(event.target.value)
-    }
     
   return (
     <div className="login-page">
         <Input placeholder="Логин" onChange={(event) => setEmail(event.target.value)}  value={email} />
-        <Input placeholder="Пароль" type="password" onChange={onChangePassword}  value={password} />
+        <Input placeholder="Пароль" type="password" onChange={(event) => setPassword(event.target.value)}  value={password} />
           <div className="login-page__buttons">
           <Button size="m" onClick={login} onKeyDown={handleKeyDown}>Войти</Button>
           <Button size="m" type='create' onClick={registration}>Зарегистрироваться</Button>

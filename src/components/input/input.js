@@ -11,7 +11,7 @@ return (
         onChange={onChange}
         placeholder={placeholder}
         value={value}
-        className="admine-line__graph"
+        className="input"
       />
   </>
 )

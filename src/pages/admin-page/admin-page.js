@@ -25,24 +25,14 @@ export const AdminPage = () => {
   useEffect(() => {
     dispatch(getGames())
   }, [])
-  
-  const onChangeTitle = (event) => {
-    setTitle(event.target.value)
-  }
-  const onChangeDescription = (event) => {
-    setDescription(event.target.value)
-  }
-  const onChangeImage = (event) => {
-    setImage(event.target.value)
-  }
-  const onChangeGenres = (event) => {
-    setGenres(event.target.value)
-  }
-  const onChangePrice = (event) => {
-    setPrice(event.target.value)
-  }
-  const onChangeVideo = (event) => {
-    setVideo(event.target.value)
+
+  const onReset = () => {
+    setTitle("")
+    setDescription("")
+    setImage("")
+    setGenres("")
+    setPrice("")
+    setVideo("")
   }
 
   const onSubmit = async () =>{ 
@@ -55,6 +45,7 @@ export const AdminPage = () => {
         video,
         description,
       })
+      onReset()
       dispatch(getGames())
     } catch (err) {
       dispatch(getGamesFailure())
@@ -88,13 +79,12 @@ export const AdminPage = () => {
     </div>
 
     <div className="admine-line__inputs">
-      <div className="admine-line__graph-id"> * </div>
-      <Input placeholder={"Игра"} onChange={onChangeTitle} value={title} />
-      <Input placeholder={"Картинка"} onChange={onChangeImage} value={image} />
-      <Input placeholder={"Жанры"} onChange={onChangeGenres} value={genres} />
-      <Input placeholder={"Цена"} onChange={onChangePrice} value={price} />
-      <Input placeholder={"Видео"} onChange={onChangeVideo} value={video} />
-      <Input placeholder={"Описание"} onChange={onChangeDescription} value={description} />
+      <Input placeholder={"Игра"} onChange={event => setTitle(event.target.value)} value={title} />
+      <Input placeholder={"Картинка"} onChange={event => setImage(event.target.value)} value={image} />
+      <Input placeholder={"Жанры"} onChange={event => setGenres(event.target.value)} value={genres} />
+      <Input placeholder={"Цена"} onChange={event => setPrice(event.target.value)} value={price} />
+      <Input placeholder={"Видео"} onChange={event => setVideo(event.target.value)} value={video} />
+      <Input placeholder={"Описание"} onChange={event => setDescription(event.target.value)} value={description} />
     </div>
     <Button type="primary" size='m' onClick={onSubmit}>
       Добавить игру

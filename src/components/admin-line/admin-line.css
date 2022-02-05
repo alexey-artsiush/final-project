@@ -1,6 +1,6 @@
 .admine-line{
   margin: 7px;
-  width: 320px;
+  width: 300px;
   border-radius: 15px;
   background-color: rgb(36, 37, 41);
   padding: 10px;
@@ -11,12 +11,11 @@
   background-color: rgb(76, 78, 85);
   color: white;
   border-radius: 4px;
-  width: 100%;
+  width: 98%;
   height: 2.5rem;
   margin: 2px;
   padding: 3px;
   overflow: hidden;
-  position: relative;
 }
 
 .admine-line__graph:after {
