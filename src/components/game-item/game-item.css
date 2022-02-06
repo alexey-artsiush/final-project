@@ -6,6 +6,7 @@
   background-color: rgb(36, 37, 41);
   border-radius: 15px;
   position: relative;
+  cursor: pointer;
 }
 
 .game-item:not(:last-child) {

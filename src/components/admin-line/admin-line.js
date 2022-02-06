@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { ModalWindow } from "../modal/modal";
 import { Button } from "../../components/button";
 import "./admin-line.css"
 

@@ -57,7 +57,9 @@ export const AdminPage = () => {
         dispatch(getGames())
       } catch (err) {
         dispatch(getGamesFailure())
-      }}
+  }}
+
+  
      
   return (
   <div className="admin-page">
@@ -77,7 +79,6 @@ export const AdminPage = () => {
         />
       )})}
     </div>
-
     <div className="admine-line__inputs">
       <Input placeholder={"Игра"} onChange={event => setTitle(event.target.value)} value={title} />
       <Input placeholder={"Картинка"} onChange={event => setImage(event.target.value)} value={image} />
