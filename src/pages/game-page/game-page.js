@@ -1,13 +1,15 @@
 import React from "react";
-import { useSelector} from 'react-redux';
 import { GameBuy } from "../../components/game-buy";
 import { GameCover } from "../../components/game-cover/game-cover";
 import { GameGenre } from "../../components/game-genre";
+import { Comments } from "../../components/comments"
+import { useSelector } from "react-redux";
 import "./game-page.css";
+
+
 
 export const GamePage = () => {
   const game = useSelector(state => state.game.currentGame);
-
   if(!game) return null
 
   return (
@@ -35,6 +37,7 @@ export const GamePage = () => {
           </div>
         </div>
       </div>
+        <Comments />  
     </div>
   );
 };

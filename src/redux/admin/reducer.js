@@ -37,7 +37,7 @@ const adminSlice = createSlice({
 })
 
 export const 
-{setItemInput, deleteItemInput, 
+  {setItemInput, deleteItemInput, 
   getGamesStart, getGamesSuccess, getGamesFailure,
   setTitleStart, setTitleSuccess, setTitleFailure} 
   = adminSlice.actions
@@ -57,7 +57,7 @@ export const getGames = () => {
       dispatch(getGamesSuccess(data))
     }
     catch (error) {
-      dispatch(getGamesFailure());
+      dispatch(getGamesFailure(error));
     }
   }
 }

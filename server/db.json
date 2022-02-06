@@ -1,9 +1,41 @@
 {
+  "comments": [
+    {
+      "id": 1,
+      "user": "Player228",
+      "text": "Super!",
+      "date": "01.01.2022, 19:11:14"
+    },
+    {
+      "id": 2,
+      "user": "SH4RK",
+      "text": "So so...",
+      "date": "05.01.2022, 19:11:14"
+    },
+    {
+      "id": 3,
+      "user": "deadlyne",
+      "text": "Можно играть с друзьями",
+      "date": "06.02.2022, 19:11:14"
+    },
+    {
+      "user": "_Lemon_",
+      "text": "Крутая игра, рекомендую!",
+      "date": "056.02.2022, 19:11:14",
+      "id": 4
+    },
+    {
+      "user": "fer",
+      "text": "Cool!",
+      "date": "06.02.2022, 19:11:14",
+      "id": 5
+    }
+  ],
   "users": [
     {
       "email": "art@mail.ru",
       "password": "$2a$10$Myb.Kjj.McduDzCOC5d6peM1H613/vBICRNTmAmHx9VElKBxMlZW.",
-      "id": 7
+      "id": 1
     }
   ],
   "GAMES": [
@@ -81,6 +113,6 @@
       "video": "https://www.youtube.com/embed/ssrNcwxALS4",
       "id": 6,
       "description": "Assassin’s Creed Valhalla — мультиплатформенная компьютерная игра в жанре action/RPG, разработанная студией Ubisoft Montreal под издательством компании Ubisoft. Является двенадцатой игрой в серии игр Assassin’s Creed."
-    } 
+    }
   ]
 }

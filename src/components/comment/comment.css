@@ -1,0 +1,12 @@
+.comment {
+  width: 240px;
+  border-radius: 7px;
+  padding: 5px;
+  margin: 10px;
+  background-color: rgb(76, 78, 85);
+  color: rgb(170, 170, 170)  
+}
+
+.comment__text-main {
+  color: white;
+}
